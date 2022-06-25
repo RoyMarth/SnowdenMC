@@ -1,0 +1,42 @@
+<HTML>
+<head>
+<script type = "text/javascript">
+function MineCraftCoordt() {
+  x1 = prompt("What is the X1 Value?")
+  z1 = prompt("What is the Z1 Value?")
+  x2 = prompt("What is the X2 Value?")
+  z2 = prompt("What is the Z2 Value?")
+  var coord1 = [x1, z1];
+  var coord2 = [x2, z2];
+
+  if (coord1[0] > 0 && coord2[0] > 0 || coord1[0] < 0 && coord2[0] < 0){
+    if (coord1[0] > coord2[0]){
+      var x = (Math.abs(coord1[0]) - Math.abs(coord2[0])) + 1
+    }
+    else{
+      var x = (Math.abs(coord2[0]) - Math.abs(coord1[0])) + 1
+    }
+  }
+  else if (coord1[0] >= 0 && coord2[0] <= 0 || coord1[0] <= 0 && cord2[0] >= 0){
+    var x = (Math.abs(coord1[0]) + Math.abs(coord2[0])) + 1
+  }
+  if (coord1[1] > 0 && coord2[1] > 0 || coord1[1] < 0 && coord2[1] < 0){
+    if (coord1[1] > coord2[1]){
+      var y = (Math.abs(coord1[1]) - Math.abs(coord2[1])) + 1
+    }
+    else{
+      var y = (Math.abs(coord2[1]) - Math.abs(coord1[1])) + 1
+    }
+  }
+  else if (coord1[1] >= 0 && coord2[1] <= 0 || coord1[1] <= 0 && cord2[1] >= 0){
+    var y = (Math.abs(coord1[1]) + Math.abs(coord2[1])) + 1
+  }
+  var output = x * y
+  alert(output);
+}
+</script>
+<body>
+<p>Click the fucking button</p>
+<input type = "button" onclick = "MineCraftCoordt()" value = "Display">
+</body>
+</html>
